@@ -10,13 +10,16 @@ PINEAPPLE_PEN = $(PINEAPPLE) $(PEN) pineapple-pen.o
 PPAP = $(sort $(PINEAPPLE_PEN) $(APPLE_PEN))
 
 
-all: apple-pen-main.exe
+all: apple-pen-main.exe pineapple-pen-main.exe ppap.exe
 
 apple-pen-main.exe: apple-pen-main.cpp $(APPLE_PEN)
 	g++ -o apple-pen-main.exe apple-pen-main.cpp $(APPLE_PEN)
 
 pineapple-pen-main.exe: pineapple-pen-main.cpp $(PINEAPPLE_PEN)
 	g++ -o pineapple-pen-main.exe pineapple-pen-main.cpp $(PINEAPPLE_PEN)
+
+ppap.exe: ppap.cpp $(PPAP)
+	g++ -o ppap.exe ppap.cpp $(PPAP)
 
 apple-pen.o: apple-pen.cpp apple.h pen.h
 	g++ -c apple-pen.cpp
