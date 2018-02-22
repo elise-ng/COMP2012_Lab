@@ -11,7 +11,7 @@ string Pen::add(string a) {
 string Pen::reverse() {
     size_t dashpos = words.find('-');
     if (dashpos == string::npos) //no dash to reverse
-	return words; 
+	return words;
     size_t seconddash = words.find('-', dashpos + 1);
     if (seconddash != string::npos) //there are more than one dash
 	return words;
@@ -26,5 +26,5 @@ string Pen::toString() const {
 }
 
 Pen::Pen() {
-    words = "Pen";
-}	
+    words = "Pin";
+}
