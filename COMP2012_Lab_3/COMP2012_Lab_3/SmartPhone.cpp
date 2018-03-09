@@ -9,6 +9,7 @@
 #include "SmartPhone.h"
 
 SmartPhone::SmartPhone(const string& vendor, int num) : CellularPhone(vendor, num) {
+    this->os = new OS();
 }
 
 SmartPhone::SmartPhone(const string& vendor, int num, const string& os_name, int os_ver) : CellularPhone(vendor, num) {
@@ -16,9 +17,8 @@ SmartPhone::SmartPhone(const string& vendor, int num, const string& os_name, int
 }
 
 SmartPhone::~SmartPhone() {
-    // FIXME: Weird bug, will crash due to accessing unassigned memory
-//    delete this->os;
-//    this->os = nullptr;
+    delete this->os;
+    this->os = nullptr;
 }
 
 void SmartPhone::browse_web(const string &url) {
