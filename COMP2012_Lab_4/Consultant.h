@@ -12,7 +12,7 @@ using namespace std;
 
 #include "Employee.h"
 
-class Consultant
+class Consultant: public Employee
 {
 public:
 	/**
@@ -24,8 +24,6 @@ public:
 	Consultant(int cid, string cname, double base);
 
 	/* getter */
-	int getID() const;
-	string getName() const;
 	double getBaseSalary() const;
 
 	/* setter */
@@ -45,8 +43,6 @@ public:
 	void check(Item item) const;
 
 private:
-	int cid;
-	string cname;
 	double baseSalary;
 };
 

@@ -5,7 +5,7 @@
 
 #include "Consultant.h"
 
-Consultant::Consultant(int cid, string cname, double base): cid(cid), cname(cname), baseSalary(base) {
+Consultant::Consultant(int cid, string cname, double base): Employee(cid, cname), baseSalary(base) {
 }
 
 double Consultant::getBaseSalary() const {
@@ -22,7 +22,3 @@ double Consultant::netSalary(double salary) const {
 
 void Consultant::check(Item item) const {
 }
-
-
-
-
