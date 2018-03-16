@@ -37,8 +37,8 @@ int main()
 	consultantPtr = econ;
 	consultantPtr->check(Item::id);
 	consultantPtr->check(Item::name);
-	consultantPtr->setWage(650);
-	consultantPtr->setHours(90);
+	// consultantPtr->setWage(650); // setWage only available for EducationalConsultant
+	// consultantPtr->setHours(90); // setHours only available for EducationalConsultant
 	consultantPtr->check(Item::base_salary);
 	consultantPtr->check(Item::performance_salary);
 	consultantPtr->check(Item::net_salary);
@@ -47,7 +47,7 @@ int main()
 	Employee& employeeRef = *econ;
 	employeeRef.check(Item::id);
 	employeeRef.check(Item::name);
-	employeeRef.setBaseSalary(20000);
+	// employeeRef.setBaseSalary(20000); // setBaseSalary only available for Consultant
 	employeeRef.check(Item::base_salary);
 	employeeRef.check(Item::performance_salary);
 	employeeRef.check(Item::net_salary);
@@ -56,8 +56,3 @@ int main()
 	delete econ;
 	return 0;
 }
-
-
-
-
-
