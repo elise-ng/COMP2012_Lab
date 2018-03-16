@@ -42,12 +42,6 @@ double Consultant::netSalary(double salary) const {
 
 void Consultant::check(Item item) const {
 	switch(item) {
-	case Item::id:
-		cout << "ID: " << this->getID() << endl;
-		break;
-	case Item::name:
-		cout << "Name: " << this->getName() << endl;
-		break;
 	case Item::base_salary:
 		cout << "Base Salary: " << this->getBaseSalary() << endl;
 		break;
@@ -55,6 +49,6 @@ void Consultant::check(Item item) const {
 		cout << "Net Salary: " << this->netSalary(this->baseSalary) << endl;
 		break;
 	default:
-		cout << "Invalid item." << endl;
+		this->Employee::check(item);
 	}
 }
