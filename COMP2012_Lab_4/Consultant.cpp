@@ -46,7 +46,7 @@ void Consultant::check(Item item) const {
 		cout << "Base Salary: " << this->getBaseSalary() << endl;
 		break;
 	case Item::net_salary:
-		cout << "Net Salary: " << this->netSalary(this->baseSalary) << endl;
+		cout << "Net Salary: " << this->netSalary(this->getBaseSalary()) << endl;
 		break;
 	default:
 		this->Employee::check(item);
