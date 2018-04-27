@@ -48,14 +48,17 @@ int main()
 	// Your code for part 3
 
 	// Print the info for SlowLib
-	
+    SlowLib::print_info();
 	// Create an iterator from SlowLib, then call the next() function
+    SlowLib::Iterator slowi = SlowLib::Iterator();
+    slowi.next();
 	
 
 	// Print the info for FastLib
-	
+    FastLib::print_info();
 	// Create an iterator from FastLib, then call the next() function
-	
+    FastLib::Iterator fasti = FastLib::Iterator();
+    fasti.next();
 
 	return 0;
 }
