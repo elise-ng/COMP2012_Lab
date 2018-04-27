@@ -16,7 +16,7 @@ using std::endl;
 // 
 double area_sum(const Rectangle& r, const Square& s)
 {
-	return 0.0;
+	return r.area() + s.area();
 }
 
 int main()
