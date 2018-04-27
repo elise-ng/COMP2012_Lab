@@ -14,7 +14,7 @@ using std::endl;
 // Part 2
 // 
 // Uncomment the following after you finished part 1
-/*
+
 class TestSquare : public Test{
 public:
 	virtual ~TestSquare() = default;
@@ -52,5 +52,5 @@ public:
 		cout << endl;
 	}
 };
-*/
+
 #endif

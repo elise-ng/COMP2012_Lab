@@ -34,11 +34,11 @@ int main()
 	// Part 2
 	// 
 	// Uncomment the following after you finished part 1
-	// TestRectangle test_rectangle;
-	// test_rectangle.run();
+     TestRectangle test_rectangle;
+     test_rectangle.run();
 
-	// TestSquare test_square;
-	// test_square.run();
+     TestSquare test_square;
+     test_square.run();
 
 	cout << "Part 3" << endl;
 

@@ -14,7 +14,7 @@ using std::endl;
 // Part 2
 // 
 // Uncomment the following after you finished part 1
-/*
+
 class TestRectangle : public Test{
 public:
 	virtual ~TestRectangle() = default;
@@ -56,5 +56,5 @@ public:
 		cout << endl;
 	}
 };
-*/
+
 #endif
