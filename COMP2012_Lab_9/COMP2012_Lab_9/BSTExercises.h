@@ -27,7 +27,7 @@ template <typename KT, typename VT>
 bool isBalanced(const BST<KT, VT>& bst) {
 	/****** START YOUR IMPLEMENTATION FOR PART A1 HERE ******/
 
-	return false;
+    return bst.root == nullptr || (isBalanced(bst.root->left) && isBalanced(bst.root->right) && abs(treeHeight(bst.root->left) - treeHeight(bst.root->right)) <= 1);
 
 	/******* END YOUR IMPLEMENTATION FOR PART A1 HERE *******/
 }
