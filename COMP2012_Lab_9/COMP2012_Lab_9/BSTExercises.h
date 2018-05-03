@@ -57,9 +57,17 @@ int diameter(const BST<KT, VT>& bst) {
 // under our assumptions).
 char decode(const BST<int, char>& bst, const string& symbol, unsigned int index = 0) {
 	/****** START YOUR IMPLEMENTATION FOR PART B2 HERE ******/
-
-	return '*';
-
+    BST<int, char>::BSTnode* current = bst.root;
+    for (int i = 0; i < symbol.length(); i++) {
+        if (symbol[i] == '.') {
+            current = current->left.root;
+        } else if (symbol[i] == '-') {
+            current = current->right.root;
+        } else {
+            return '*';
+        }
+    }
+    return current->value;
 	/******* END YOUR IMPLEMENTATION FOR PART B2 HERE *******/
 }
 
