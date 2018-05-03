@@ -42,7 +42,11 @@ template <typename KT, typename VT>
 int diameter(const BST<KT, VT>& bst) {
 	/****** START YOUR IMPLEMENTATION FOR PART A2 HERE ******/
 
-	return 0;
+    if (bst.root == nullptr) {
+        return 0;
+    }
+
+	return max(max(diameter(bst.root->left), diameter(bst.root->right)), treeHeight(bst.root->left) + treeHeight(bst.root->right) + 1);
 
 	/****** START YOUR IMPLEMENTATION FOR PART A2 HERE ******/
 }
